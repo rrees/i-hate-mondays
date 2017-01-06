@@ -3,7 +3,8 @@
     "mocha": "^3.2.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "manualTest": "node run.js"
   }
 
 }
