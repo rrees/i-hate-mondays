@@ -1,2 +1,3 @@
-# i-hate-mondays
-Javascript library to generate custom arrays of dates that exclude certain days
+# I hate Mondays
+
+A library to generate arrays of dates that exclude certain days
