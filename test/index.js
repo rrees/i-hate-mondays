@@ -36,4 +36,9 @@ describe('Date Generator', () => {
       assert.equal(date.getSeconds(), 0);
     });
   });
+
+  it('should handle an excluded week gracefully', function() {
+    const allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    assert.deepEqual(dateGenerator.getDates(new Date(), 5, allDays), []);
+  })
 });
