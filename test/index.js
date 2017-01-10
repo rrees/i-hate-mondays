@@ -40,5 +40,21 @@ describe('Date Generator', () => {
   it('should handle an excluded week gracefully', function() {
     const allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     assert.deepEqual(dateGenerator.getDates(new Date(), 5, allDays), []);
-  })
+  });
+
+  it('should allow an arbitary exclusion function to be run', function() {
+    function excludeChristmasHolidays(date) {
+      if(date.getMonth() === 11
+        && (date.getDate() === 25 || date.getDate() === 26)) {
+          return true;
+        }
+      return false;
+    }
+
+    const days = dateGenerator.getDates(new Date('2016-12-24'), 2, [], excludeChristmasHolidays);
+
+    const dates = days.map((d) => d.getDate());
+
+    assert.deepEqual(dates, [24, 27]);
+  });
 });
