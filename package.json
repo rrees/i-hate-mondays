@@ -4,6 +4,9 @@
   "description": "A date array generator that allows you to exclude specific days",
   "license": "MIT",
   "main": "./lib/index",
+  "engines": {
+    "node": ">=6"
+  },
   "devDependencies": {
     "mocha": "^3.2.0"
   },
