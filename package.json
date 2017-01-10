@@ -1,10 +1,25 @@
 {
+  "name": "i-hate-mondays",
+  "version": "0.0.1",
+  "description": "A date array generator that allows you to exclude specific days",
+  "license": "MIT",
+  "main": "./lib/index",
   "devDependencies": {
     "mocha": "^3.2.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha",
     "manualTest": "node run.js"
+  },
+  "contributors": [
+    {"name" : "Robert Rees"}
+  ],
+  "keywords": [
+    "dates"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rrees/i-hate-mondays.git"
   }
 
 }
